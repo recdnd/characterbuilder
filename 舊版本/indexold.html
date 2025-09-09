@@ -396,27 +396,28 @@ Dragonkin, Aasimar, God-kin, Doppelganger, Vampire, Lizardfolk, Orc, Goblin,
     const row=document.createElement('div');
     row.className='row';
     row.dataset.type = data.type==='Race' ? 'Race' : 'Class';
-    row.innerHTML=`
-      <div class="toggleType ${row.dataset.type==='Race'?'race':'class'}" title="${i18n[lang].toggleHint}">${row.dataset.type==='Race'?i18n[lang].race:i18n[lang].class}</div>
-      <input type="text" class="name" placeholder="${i18n[lang].namePH}" value="${data.name??''}">
-      <div class="step-wrap">
-        <select class="stepSel" title="${i18n[lang].step}">
-          <option value="1">${i18n[lang].step} 1</option>
-          <option value="5">${i18n[lang].step} 5</option>
-          <option value="custom">Custom</option>
-        </select>
-        <input type="number" class="stepCustom" min="1" placeholder="${i18n[lang].custom}" value="${data.stepCustom??''}">
-      </div>
-      <input type="number" class="lvl" min="0" value="${clampLevel(Number(data.lvl)||0)}" title="${i18n[lang].level}">
-      <div class="pill">
-        <button class="minus" title="${i18n[lang].dec}">−</button>
-        <button class="plus"  title="${i18n[lang].inc}">＋</button>
-      </div>
-      <input type="text" class="note" placeholder="${i18n[lang].notePH}" value="${data.note??''}">
-      <button class="up" title="${i18n[lang].moveUp}">↑</button>
-      <button class="down" title="${i18n[lang].moveDown}">↓</button>
-      <button class="del" title="${i18n[lang].del}">×</button>
-    `;
+		row.innerHTML = `
+		  <div class="toggleType ${row.dataset.type==='Race'?'race':'class'}" title="${i18n[lang].toggleHint}">
+		    ${row.dataset.type==='Race'?i18n[lang].race:i18n[lang].class}
+		  </div>
+		  <input type="text" class="name" placeholder="${i18n[lang].namePH}" value="${data.name??''}">
+		  <div class="step-wrap">
+		    <select class="stepSel" title="${i18n[lang].step}">
+		      <option value="1">${i18n[lang].step} 1</option>
+		      <option value="5">${i18n[lang].step} 5</option>
+		      <option value="10">${i18n[lang].step} 10</option>
+		    </select>
+		  </div>
+		  <input type="number" class="lvl" min="0" value="${clampLevel(Number(data.lvl)||0)}" title="${i18n[lang].level}">
+		  <div class="pill">
+		    <button class="minus" title="${i18n[lang].dec}">−</button>
+		    <button class="plus"  title="${i18n[lang].inc}">＋</button>
+		  </div>
+		  <input type="text" class="note" placeholder="${i18n[lang].notePH}" value="${data.note??''}">
+		  <button class="up" title="${i18n[lang].moveUp}">↑</button>
+		  <button class="down" title="${i18n[lang].moveDown}">↓</button>
+		  <button class="del" title="${i18n[lang].del}">×</button>
+		`;
 
     // toggle type
     const toggle=row.querySelector('.toggleType');

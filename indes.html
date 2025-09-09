@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Overlord Character Builder</title>
+<link rel="icon" type="image/x-icon" href="overlordbuilder.ico">
+
+<!-- ======= SEO / Social / Structured Data for Overlord Character Builder ======= -->
+<!-- Canonical & i18n -->
+<link rel="canonical" href="https://SITE_URL/" />
+<link rel="alternate" hreflang="x-default" href="https://SITE_URL/" />
+<link rel="alternate" hreflang="en" href="https://SITE_URL/" />
+<link rel="alternate" hreflang="ja" href="https://SITE_URL/?lang=ja" />
+<link rel="alternate" hreflang="zh-Hant" href="https://SITE_URL/?lang=zh-Hant" />
+<link rel="alternate" hreflang="zh-CN" href="https://SITE_URL/?lang=zh-CN" />
+
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<meta name="theme-color" content="#8f1e1e" />
+<meta name="application-name" content="Overlord Character Builder" />
+<meta name="author" content="Overlord Character Builder Team" />
+
+<!-- Multilingual description (concise, includes EN/JA/ZH) -->
+<meta name="description" content="Overlord Character Builder – D&D-style character sheet & level calculator (Race/Class split, presets, TXT/JSON export, sort, cap, EN/JA/ZH UI). 
+オーバーロード風／D&D風のキャラビルダー。種族/職業レベル分割、TXT/JSON出力、並び替え、上限、英語/日本語/繁体中文対応。 
+Overlord 角色建構器：D&D 風角色卡與等級計算（種族/職業分流，TXT/JSON 匯出，排序，上限，英/日/繁中介面）。" />
+
+<!-- Expanded multilingual keywords -->
+<meta name="keywords" content="
+Overlord character builder, Overlord character sheet, Overlord multiclass planner, Overlord character maker, level calculator, race class levels, character planner, character optimizer,
+DND, DND5e, D&D, Dungeons and Dragons, 5e, TTRPG, tabletop RPG, character sheet builder, multiclass calculator, make my custom overlord character build
+Warrior, Fighter, Barbarian, Paladin, Cleric, Warpriest, Inquisitor, Druid, Ranger, Rogue, Bard, Monk, Wizard, Sorcerer, Warlock, Artificer, Alchemist,
+Sage, Linguist, Illusionist, Shadowdancer, Runecaster, Necromancer, Fateweaver, Dreamwalker, Trickster, Protector, isekai ainz ooal gown,　My own Character, Original tool quick easy to use, Nazarick, Momonga, Albedo, Demiurge, Shalltear, Aura, Mare, Cocytus, Sebas,Narberal Gamma, Solution Epsilon, Entoma, CZ2128 Delta，Gazef Stronoff, Climb, Lakyus, Evileye, Tia, Tina, Brain Unglaus, Renner, Ramposa III,
+Dragonkin, Aasimar, God-kin, Doppelganger, Vampire, Lizardfolk, Orc, Goblin,
+
+オーバーロード キャラクター シート, オーバーロード ビルダー, キャラビルダー, ビルド最適化, マルチクラス, レベル計算,
+ダンジョンズ&ドラゴンズ, D&D 5e, テーブルトークRPG, 種族レベル, 職業レベル, プリセット, エクスポート, キャラクターメーカー, カスタム　オーバーロード キャラクター　デザイン，アインズ・ウール・ゴウン，モモンガ　キャラクターカード，英語 日本語 繁体字, 丸山つくね，私のキャラ、作りましょう、おーばーろーど、ちゃらくたーつくり、原作、幻想二次創作、同人、世界観、人物設定、オリジナルキャラ, Albedo,　アルベド、デミウルゴス, シャルティア, アウラ, マーレ, コキュートス, セバス, パンドラズ・アクター, ニグレド, ルベド,
+ナーベラル, ソリュシャン, エントマ, シズ, ユリ, ルプスレギナ,
+ガゼフ, クライム, ラキュース, イビルアイ, ティア, ティナ, ブレイン, ラナー, ランポッサ,
+ジルクニフ, フールーダ, カジット, ニグン, 白金竜王,
+
+龙与地下城, DND 5e, 地下城与龙, 角色生成器, 角色卡, 角色构建器, 多职业, 等级计算, 种族等级, 职业等级, 预设, 导出, 角色生成, 角色養成，角色表，人物設定卡，不死者之王，骨王，魔法，異世界戰士，納薩力克地下大墳墓，空巢老骨，战斗女仆、安兹, 飞鼠, 雅儿贝德, 迪米乌哥斯, 夏提雅, 亚乌菈, 马雷, 科塞特斯, 赛巴斯, 潘朵拉斯, 尼古蕾朵, 鲁贝多,
+娜贝拉尔, 索琉香, 恩多玛, 西兹, 尤莉, 鲁普丝蕾其娜, 葛傑夫, 克莱姆, 拉克尤丝, 伊比鲁艾, 缇雅, 缇娜, 布莱恩, 拉娜, 兰波萨,
+吉尔克尼弗, 夫路达, 卡吉特, 尼根, 白金龙王, 深渊龙王, 丽古莉特
+龍與地下城, 角色產生器, 角色卡, 角色建構器, 多職業, 等級計算, 種族等級, 職業等級, 預設, 匯出, 英文 日文 繁體中文
+" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Overlord Character Builder" />
+<meta property="og:title" content="Overlord Character Builder – D&D-style Character Sheet & Level Calculator" />
+<meta property="og:description" content="Build Overlord/D&D-style characters: Race/Class split, level cap, sort, TXT/JSON export, EN/JA/ZH UI. Perfect for DND5e builds and multiclass planning." />
+<meta property="og:url" content="https://SITE_URL/" />
+<meta property="og:image" content="https://SITE_URL/OG_IMAGE.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="zh_CN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Overlord Character Builder – D&D-style Character Sheet & Level Calculator" />
+<meta name="twitter:description" content="Race/Class split, presets, level cap, sort, TXT/JSON export. EN/JA/ZH UI. Great for DND5e & Overlord-inspired builds." />
+<meta name="twitter:image" content="https://SITE_URL/OG_IMAGE.jpg" />
+<meta name="twitter:site" content="@your_handle" />
+
+<!-- PWA/manifest (optional) -->
+<link rel="manifest" href="/site.webmanifest" />
+
+<!-- JSON-LD: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Overlord Character Builder",
+  "url": "https://SITE_URL/",
+  "inLanguage": ["en","ja","zh-Hant","zh-CN"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://SITE_URL/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "description": "Overlord Character Builder – D&D-style character sheet / level calculator with Race/Class split, presets, sorting, level cap, TXT/JSON export, EN/JA/ZH UI."
+}
+</script>
+
+<!-- JSON-LD: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Overlord Character Builder",
+  "url": "https://SITE_URL/",
+  "operatingSystem": "Web",
+  "applicationCategory": "DeveloperApplication",
+  "inLanguage": ["en","ja","zh-Hant","zh-CN"],
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "featureList": [
+    "Race/Class level split totals",
+    "Presets and quick add",
+    "1/5/custom step adjust, inline +/-",
+    "Sort by level, level cap highlight",
+    "TXT / JSON export, JSON import",
+    "English / Japanese / Traditional Chinese UI",
+    "Dark mode toggle"
+  ],
+  "keywords": "Overlord builder, character sheet, DND5e, dungeons and dragons, multiclass planner, level calculator, 種族 等級 職業, キャラクターシート, 角色建構器",
+  "image": "https://SITE_URL/OG_IMAGE.jpg"
+}
+</script>
+<!-- ======= /SEO ======= -->
+
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* ========== Light theme ========== */
+  :root{
+    --khaki:#f1e7cf; --khaki-2:#ebdfc2; --paper:#f8f1dd;
+    --ink:#351414; --deep:#200b0b; --red-2:#b82727; --red-3:#6f1515;
+    --line:#d4c7a4; --muted:#6f5d4d; --race:#c09f50; --class:#7a0a0a;
+    --ok:#e6f3d4; --bad:#ffe2e2;
+    --btn-bg:#3a4559; --btn-bd:#46546e; --btn-fg:#ffffff;
+    --field-bg:#fffdf6; --card:#fff7e7; --row-alt:#fff3da;
+    --capsule-race-bg:#fff2c4; --capsule-race-bd:#f6e2a3; --capsule-race-fg:#5b4217;
+    --capsule-class-bg:#ffe2e2; --capsule-class-bd:#f2bbbb; --capsule-class-fg:#5a1212;
+    --stack-race:#c09f50; --stack-class:#8f1e1e;
+
+    --btn-radius:8px;
+    --pad-sm:6px 10px; --pad-xs:4px 8px;
+  }
+  /* ========== Dark theme (default) ========== */
+  body.theme-dark{
+    --khaki:#20110e; --khaki-2:#2a1712; --paper:#160d0a;
+    --ink:#f5e9e5; --deep:#f5e9e5; --red-2:#ff3a3a; --red-3:#d02525;
+    --line:#3b2620; --muted:#c0a79c; --race:#d5b15f; --class:#ff6b6b;
+    --ok:#2e552e; --bad:#5a2424;
+    --btn-bg:#2f1b19; --btn-bd:#4a2a26; --btn-fg:#ffe9e3;
+    --field-bg:#1f1411; --card:#1a120f; --row-alt:#221612;
+    --capsule-race-bg:#3a2a17; --capsule-race-bd:#5b3e21; --capsule-race-fg:#f1d8a1;
+    --capsule-class-bg:#3a1717; --capsule-class-bd:#5c2323; --capsule-class-fg:#ffd2d2;
+    --stack-race:#d5b15f; --stack-class:#ff3a3a;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,var(--khaki),var(--paper));color:var(--ink);font-family:"Cardo",Georgia,serif}
+  .wrap{max-width:1200px;margin:28px auto;padding:0 18px}
+
+  header{display:flex;gap:18px;align-items:end;border-bottom:2px solid var(--line);padding-bottom:8px}
+  h1{margin:0;font-family:"UnifrakturCook","Cardo",serif;font-size:42px;line-height:1;color:var(--red-2);text-shadow:0 1px 0 #fff;cursor:pointer;user-select:none}
+  .sub{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .stat{background:var(--khaki-2);border:1px solid var(--line);padding:6px 8px;border-radius:10px;min-width:120px;text-align:center}
+  .stat b{color:var(--red-2)}
+  .cap, .nameBox{display:flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);padding:6px 8px;border-radius:10px}
+  .nameBox input, .cap input{width:150px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 8px;color:#222}
+  body.theme-dark .nameBox input, body.theme-dark .cap input{background:#140c0a;color:var(--ink);border-color:#3b2620}
+  .over{background:var(--bad)!important;border-color:#d19a9a!important}
+
+  .toolbar{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+  button,select,input{background:var(--btn-bg);color:var(--btn-fg);border:1px solid var(--btn-bd);border-radius:var(--btn-radius);padding:var(--pad-sm);font-family:"Cardo",Georgia,serif;font-size:15px}
+  button:hover, select:hover{filter:brightness(1.06)}
+  .primary{background:var(--red-2);border-color:var(--red-3);color:#fff}
+  .export,.sort{background:#3e4b64}
+  .danger{background:#6c2a2a;border-color:#511d1d}
+  .langSel{background:var(--btn-bg);color:var(--btn-fg)}
+  .hint{color:var(--muted);font-size:13px;margin:10px 2px}
+
+  /* Table layout: toggle | name | step | - | level | + | note | up | down | del */
+  .tableCard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .tableScroller{overflow-x:auto}
+  .table{min-width:980px}
+  .row{
+    display:grid;
+    grid-template-columns: 86px 1.15fr 90px 28px 110px 28px 1.1fr 28px 28px 28px;
+    gap:8px;align-items:center;padding:10px 12px;border-bottom:1px dashed var(--line)
+  }
+  .row:nth-child(odd){background:var(--row-alt)}
+  .row input[type="text"], .row input[type="number"]{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--field-bg);color:var(--ink)}
+
+  .toggleType{display:flex;justify-content:center;align-items:center;gap:6px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:6px 10px;cursor:pointer;user-select:none}
+  .toggleType.race{background:var(--capsule-race-bg);color:var(--capsule-race-fg);box-shadow:inset 0 0 0 2px var(--capsule-race-bd)}
+  .toggleType.class{background:var(--capsule-class-bg);color:var(--capsule-class-fg);box-shadow:inset 0 0 0 2px var(--capsule-class-bd)}
+
+  .stepSel{background:#fffef7;color:#241;border:1px solid var(--line);padding:8px 10px;border-radius:8px}
+  body.theme-dark .stepSel{background:#160e0c;color:var(--ink);border-color:#3b2620}
+
+  /* icon-only controls */
+  .iconBtn{border:none;border-radius:6px;padding:var(--pad-xs);width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;cursor:pointer;transition:filter .15s ease, transform .05s ease}
+  .iconBtn:hover{filter:brightness(1.12)} .iconBtn:active{transform:translateY(1px)}
+  .minus{background:#e9b9b9;color:#5f1313} .plus{background:#cfe6b8;color:#234010}
+  .up{background:#e8dfc9;color:#332} .down{background:#e8dfc9;color:#332} .del{background:#f2b7b7;color:#5f1313}
+
+  @media (max-width:768px){
+    h1{font-size:28px;letter-spacing:.5px}
+    .stat{padding:4px 8px;min-width:110px}
+    .nameBox input,.cap input{width:140px}
+    .toolbar button,.toolbar select{font-size:14px;padding:8px 10px;border-radius:8px}
+    .table{min-width:860px}
+    .row{grid-template-columns: 80px 1.05fr 88px 26px 96px 26px 1fr 26px 26px 26px;gap:6px;padding:8px 10px}
+    .iconBtn{width:26px;height:26px;font-size:15px}
+  }
+
+  /* bottom stacked bar */
+  .stack{margin:12px 0 0;border:1px solid var(--line);border-radius:10px;background:#fff;overflow:hidden;height:12px}
+  body.theme-dark .stack{background:#0f0908}
+  .stack-inner{display:flex;width:100%;height:100%}
+  .stack-race{background:var(--stack-race)} .stack-class{background:var(--stack-class)}
+  .stack-legend{display:flex;gap:10px;align-items:center;margin-top:6px;color:var(--muted);font-size:12px}
+  .dot{width:10px;height:10px;border-radius:2px;display:inline-block;vertical-align:middle}
+  .dot.r{background:var(--stack-race)} .dot.c{background:var(--stack-class)}
+
+  /* quick links */
+  .quick-links{position:fixed;bottom:10px;right:12px;display:flex;gap:8px;z-index:9999}
+  .copyBtn{background:#444;color:#fff;font-size:12px;font-weight:bold;padding:4px 8px;border-radius:6px;border:none;cursor:pointer;opacity:.9}
+  .copyBtn:hover{opacity:1;filter:brightness(1.1)}
+  .sig{background:#b82727;color:#fff;font-size:12px;font-weight:bold;padding:4px 8px;border-radius:6px;text-decoration:none;opacity:.9}
+  .sig:hover{opacity:1;filter:brightness(1.1)}
+</style>
+</head>
+<body class="theme-dark"><!-- 默認黑夜模式 -->
+  <div class="wrap">
+    <header>
+      <h1 id="title" title="Toggle dark mode">Overlord Character Builder</h1>
+      <div class="sub">
+        <div class="nameBox"><span id="nameLabel">Name</span><input id="charName" placeholder="Unnamed…" /></div>
+        <div class="stat" id="raceBox"><span data-i="raceLV">Race LV</span>: <b id="raceSum">0</b></div>
+        <div class="stat" id="classBox"><span data-i="classLV">Class LV</span>: <b id="classSum">0</b></div>
+        <div class="stat" id="totalBox"><span data-i="total">Total</span>: <b id="total">0</b></div>
+        <div class="cap"><span data-i="cap">Cap</span><input id="capInput" type="number" min="1" value="100" title="Level cap"/></div>
+        <select id="langSel" class="langSel" title="Language"><option value="en">English</option><option value="ja">日本語</option><option value="zh-Hant">繁體中文</option></select>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button class="primary" id="addRow" data-i="add">＋ Add Entry</button>
+      <button id="save" data-i="save">💾 Save (local)</button>
+      <button id="exportTxt" data-i="export">⬇ Export TXT</button>
+      <button id="exportJson">⬇ Export JSON</button>
+      <input type="file" id="importJsonInput" accept="application/json" style="display:none">
+      <button id="importJson">⬆ Import JSON</button>
+      <button id="sortDesc" data-i="sort">⇅ Sort by Level ↓</button>
+      <button class="danger" id="clear" data-i="clear">🗑 Clear All</button>
+    </div>
+
+    <p class="hint" id="tip">Tip: choose <b>Type</b> (Race / Class), set step (1/5/10), adjust with ± or direct input. Use ↑/↓ to move a row.</p>
+
+    <div class="tableCard tableScroller">
+      <div class="table" id="table"></div>
+    </div>
+
+    <div class="stack" aria-label="Race/Class stack bar">
+      <div class="stack-inner"><div class="stack-race" id="stackRace" style="width:0%"></div><div class="stack-class" id="stackClass" style="width:0%"></div></div>
+    </div>
+    <div class="stack-legend"><span><i class="dot r"></i> <span data-i="race">Race</span></span><span><i class="dot c"></i> <span data-i="class">Class</span></span></div>
+  </div>
+
+  <div class="quick-links">
+    <button id="copyLinkBtn" class="copyBtn">📋 Copy Link</button>
+    <a href="https://rec.ooo" target="_blank" rel="noopener" class="sig">By Rec</a>
+  </div>
+
+<script>
+(function(){
+  /* ===== i18n ===== */
+  const i18n = {
+    en:{title:"Overlord Character Builder",raceLV:"Race LV",classLV:"Class LV",total:"Total",cap:"Cap",
+        add:"＋ Add Entry",save:"💾 Save (local)",export:"⬇ Export TXT",sort:"⇅ Sort by Level ↓",clear:"🗑 Clear All",
+        tip:"Tip: choose <b>Type</b> (Race / Class), set step (1/5/10), adjust with ± or direct input. Use ↑/↓ to move a row.",
+        race:"Race",class:"Class",step:"Step",level:"Level",namePH:"Name…",notePH:"Note…",
+        moveUp:"Move up",moveDown:"Move down",del:"Delete",toggleHint:"Click to toggle Race/Class",nameLabel:"Name"},
+    ja:{title:"Overlord キャラクタービルダー",raceLV:"種族LV",classLV:"職業LV",total:"合計",cap:"上限",
+        add:"＋ 追加",save:"💾 保存（ローカル）",export:"⬇ TXT エクスポート",sort:"⇅ レベル順（降順）",clear:"🗑 すべて削除",
+        tip:"ヒント：タイプ（種族/職業）を選び、步長（1/5/10）を設定。± または直接入力で調整。↑/↓ で行を移動。",
+        race:"種族",class:"職業",step:"步長",level:"レベル",namePH:"名称…",notePH:"メモ…",
+        moveUp:"上へ",moveDown:"下へ",del:"削除",toggleHint:"クリックで 種族/職業 を切替",nameLabel:"名前"},
+    "zh-Hant":{title:"Overlord 角色建構器",raceLV:"種族等級",classLV:"職業等級",total:"總等級",cap:"上限",
+        add:"＋ 新增欄位",save:"💾 儲存（本機）",export:"⬇ 匯出 TXT",sort:"⇅ 依等級排序（↓）",clear:"🗑 清空全部",
+        tip:"提示：選擇 <b>類型</b>（種族 / 職業），設定步長（1/5/10），用 ± 或直接輸入調整。可用 ↑/↓ 移動列。",
+        race:"種族",class:"職業",step:"步長",level:"等級",namePH:"名稱…",notePH:"備註…",
+        moveUp:"上移",moveDown:"下移",del:"刪除",toggleHint:"點擊切換 種族/職業",nameLabel:"角色名"}
+  };
+  let lang = localStorage.getItem('olcb.lang') || 'en';
+  const t = (k)=>i18n[lang][k]||k;
+
+  function applyI18n(){
+    document.getElementById('title').textContent=t('title');
+    document.querySelectorAll('[data-i]').forEach(el=>el.textContent=t(el.getAttribute('data-i')));
+    document.getElementById('tip').innerHTML=t('tip');
+    document.getElementById('langSel').value=lang;
+    document.getElementById('nameLabel').textContent=t('nameLabel');
+    document.getElementById('charName').placeholder=t('namePH');
+    document.querySelectorAll('.row').forEach(r=>{
+      const isRace = r.dataset.type==='Race';
+      const toggle=r.querySelector('.toggleType');
+      toggle.textContent = isRace? t('race') : t('class');
+      r.querySelector('.name').placeholder=t('namePH');
+      r.querySelector('.note').placeholder=t('notePH');
+      const sel=r.querySelector('.stepSel');
+      sel.options[0].text=`${t('step')} 1`;
+      sel.options[1].text=`${t('step')} 5`;
+      sel.options[2].text=`${t('step')} 10`;
+      r.querySelector('.lvl').placeholder=t('level');
+    });
+  }
+
+  /* ===== theme toggle ===== */
+  const bodyEl = document.body;
+  // default dark. if user previously saved, honor it.
+  const storedTheme = localStorage.getItem('olcb.theme');
+  if(storedTheme==='light'){ bodyEl.classList.remove('theme-dark'); }
+  document.getElementById('title').addEventListener('click', ()=>{
+    bodyEl.classList.toggle('theme-dark');
+    const theme = bodyEl.classList.contains('theme-dark') ? 'dark' : 'light';
+    localStorage.setItem('olcb.theme', theme);
+  });
+  document.getElementById('langSel').addEventListener('change',e=>{
+    lang=e.target.value; localStorage.setItem('olcb.lang',lang); applyI18n();
+  });
+
+  const table = document.getElementById('table');
+  function stepValue(select){ return Number(select.value)||1; }
+  function clampLevel(v){ if(!Number.isFinite(v)) return 0; v=Math.floor(v); if(v<0)v=0; if(v>9999)v=9999; return v; }
+
+  const totalEl = document.getElementById('total');
+  const raceSumEl = document.getElementById('raceSum');
+  const classSumEl = document.getElementById('classSum');
+  const totalBox = document.getElementById('totalBox');
+  const capInput = document.getElementById('capInput');
+  const nameInput = document.getElementById('charName');
+
+  function calcTotals(){
+    let t=0,r=0,c=0;
+    [...table.querySelectorAll('.row')].forEach(row=>{
+      const lvl = Number(row.querySelector('.lvl').value)||0;
+      const type = row.dataset.type || 'Class';
+      t+=lvl; if(type==='Race') r+=lvl; else c+=lvl;
+    });
+    totalEl.textContent=t; raceSumEl.textContent=r; classSumEl.textContent=c;
+    const cap = Number(capInput.value)||0;
+    totalBox.classList.toggle('over', cap>0 && t>cap);
+    const denom=Math.max(t,1);
+    document.getElementById('stackRace').style.width=(r/denom*100).toFixed(2)+'%';
+    document.getElementById('stackClass').style.width=(c/denom*100).toFixed(2)+'%';
+  }
+  function onChangeRecalc(e){
+    if(e && e.target && e.target.classList.contains('lvl')){
+      e.target.value=clampLevel(Number(e.target.value));
+    }
+    calcTotals(); autosaveDebounced();
+  }
+
+  function createRow(data={}){
+    const row=document.createElement('div');
+    row.className='row';
+    row.dataset.type = data.type==='Race' ? 'Race' : 'Class';
+    row.innerHTML=`
+      <div class="toggleType ${row.dataset.type==='Race'?'race':'class'}" title="${i18n[lang].toggleHint}">${row.dataset.type==='Race'?i18n[lang].race:i18n[lang].class}</div>
+      <input type="text" class="name" placeholder="${i18n[lang].namePH}" value="${data.name??''}">
+      <select class="stepSel" title="${i18n[lang].step}">
+        <option value="1">${i18n[lang].step} 1</option>
+        <option value="5">${i18n[lang].step} 5</option>
+        <option value="10">${i18n[lang].step} 10</option>
+      </select>
+      <button class="iconBtn minus">−</button>
+      <input type="number" class="lvl" min="0" value="${clampLevel(Number(data.lvl)||0)}" placeholder="${i18n[lang].level}">
+      <button class="iconBtn plus">＋</button>
+      <input type="text" class="note" placeholder="${i18n[lang].notePH}" value="${data.note??''}">
+      <button class="iconBtn up">↑</button>
+      <button class="iconBtn down">↓</button>
+      <button class="iconBtn del">×</button>
+    `;
+
+    const toggle=row.querySelector('.toggleType');
+    function setTypeLabel(){
+      if(row.dataset.type==='Race'){ toggle.classList.remove('class'); toggle.classList.add('race'); toggle.textContent=i18n[lang].race; }
+      else{ toggle.classList.remove('race'); toggle.classList.add('class'); toggle.textContent=i18n[lang].class; }
+    }
+    toggle.addEventListener('click',()=>{ row.dataset.type=row.dataset.type==='Race'?'Class':'Race'; setTypeLabel(); onChangeRecalc(); });
+    setTypeLabel();
+
+    const stepSel=row.querySelector('.stepSel');
+    if(data.step===5) stepSel.value='5'; else if(data.step===10) stepSel.value='10'; else stepSel.value='1';
+    stepSel.addEventListener('change',()=>onChangeRecalc());
+
+    row.addEventListener('input',onChangeRecalc);
+    row.addEventListener('change',onChangeRecalc);
+
+    row.querySelector('.minus').addEventListener('click',()=>{
+      const input=row.querySelector('.lvl'); const s=stepValue(stepSel);
+      input.value=clampLevel((Number(input.value)||0)-s); onChangeRecalc();
+    });
+    row.querySelector('.plus').addEventListener('click',()=>{
+      const input=row.querySelector('.lvl'); const s=stepValue(stepSel);
+      input.value=clampLevel((Number(input.value)||0)+s); onChangeRecalc();
+    });
+    row.querySelector('.up').addEventListener('click',()=>{
+      const prev=row.previousElementSibling; if(prev){ table.insertBefore(row,prev); autosaveDebounced(); }
+    });
+    row.querySelector('.down').addEventListener('click',()=>{
+      const next=row.nextElementSibling; if(next){ table.insertBefore(next,row); autosaveDebounced(); }
+    });
+    row.querySelector('.del').addEventListener('click',()=>{
+      row.remove(); calcTotals(); autosaveDebounced();
+    });
+
+    table.appendChild(row);
+  }
+
+  document.getElementById('addRow').addEventListener('click',()=>createRow({type:'Class'}));
+
+  /* storage */
+  const LS_KEY='olcb.v10';
+  function serialize(){
+    return {
+      name: document.getElementById('charName').value.trim(),
+      cap: Number(document.getElementById('capInput').value)||100,
+      lang, theme: (document.body.classList.contains('theme-dark')?'dark':'light'),
+      items: [...document.querySelectorAll('.row')].map(row=>({
+        type: row.dataset.type || 'Class',
+        name: row.querySelector('.name').value.trim(),
+        lvl: clampLevel(Number(row.querySelector('.lvl').value)||0),
+        note: row.querySelector('.note').value.trim(),
+        step: Number(row.querySelector('.stepSel').value)||1
+      }))
+    };
+  }
+  function deserialize(obj){
+    const data=obj||{}; table.innerHTML=''; (data.items||[]).forEach(item=>createRow(item));
+    if(typeof data.cap==='number'){ document.getElementById('capInput').value=data.cap; }
+    if(typeof data.name==='string'){ document.getElementById('charName').value=data.name; }
+    if(data.lang && i18n[data.lang]){ lang=data.lang; localStorage.setItem('olcb.lang',lang); }
+    if(data.theme==='light'){ document.body.classList.remove('theme-dark'); localStorage.setItem('olcb.theme','light'); }
+    else { document.body.classList.add('theme-dark'); localStorage.setItem('olcb.theme','dark'); }
+    applyI18n(); calcTotals();
+  }
+  let autosaveTimer=null;
+  function autosaveDebounced(){ clearTimeout(autosaveTimer); autosaveTimer=setTimeout(()=>localStorage.setItem(LS_KEY, JSON.stringify(serialize())),200); }
+  document.getElementById('charName').addEventListener('input', autosaveDebounced);
+  document.getElementById('capInput').addEventListener('input', calcTotals);
+
+  document.getElementById('save').addEventListener('click',()=>{
+    localStorage.setItem(LS_KEY, JSON.stringify(serialize()));
+    const btn=document.getElementById('save'); const old=btn.textContent; btn.textContent='✅ Saved'; setTimeout(()=>btn.textContent=i18n[lang].save,1100);
+  });
+  document.getElementById('clear').addEventListener('click',()=>{
+    const msg=(lang==='ja')?'すべて削除しますか？（ローカル保存も消えます）':(lang==='zh-Hant')?'要清空全部並刪除本機存檔嗎？':'Clear all rows and local save?';
+    if(confirm(msg)){ table.innerHTML=''; calcTotals(); localStorage.removeItem(LS_KEY); document.getElementById('charName').value=''; autosaveDebounced(); }
+  });
+
+  /* export TXT */
+  document.getElementById('exportTxt').addEventListener('click',()=>{
+    const data=serialize();
+    const races=data.items.filter(x=>x.name && x.lvl>0 && x.type==='Race').sort((a,b)=> (b.lvl||0)-(a.lvl||0) || (a.name||'~').localeCompare(b.name||'~','en')).map(x=>`${i18n[lang].race}: ${x.name} lv${x.lvl}`);
+    const classes=data.items.filter(x=>x.name && x.lvl>0 && x.type!=='Race').sort((a,b)=> (b.lvl||0)-(a.lvl||0) || (a.name||'~').localeCompare(b.name||'~','en')).map(x=>`${i18n[lang].class}: ${x.name} lv${x.lvl}`);
+    const lines=[]; lines.push(...races); lines.push('------------'); lines.push(...classes);
+    const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});
+    const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url;
+    const base=(data.name?data.name.replace(/[^\w\-]+/g,'_'):'overlord-build'); const ts=new Date().toISOString().replace(/[:.]/g,'-');
+    a.download=`${base}-${ts}.txt`; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  });
+
+  /* export/import JSON */
+  document.getElementById('exportJson').addEventListener('click',()=>{
+    const obj=serialize(); const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json;charset=utf-8'});
+    const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url;
+    const base=(obj.name?obj.name.replace(/[^\w\-]+/g,'_'):'overlord-build'); const ts=new Date().toISOString().replace(/[:.]/g,'-');
+    a.download=`${base}-${ts}.json`; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  });
+  document.getElementById('importJson').addEventListener('click',()=>document.getElementById('importJsonInput').click());
+  document.getElementById('importJsonInput').addEventListener('change',e=>{
+    const f=e.target.files[0]; if(!f)return;
+    const reader=new FileReader();
+    reader.onload=()=>{ try{ const obj=JSON.parse(reader.result); deserialize(obj); localStorage.setItem(LS_KEY, JSON.stringify(obj)); }catch(err){ alert('Invalid JSON'); } };
+    reader.readAsText(f); e.target.value='';
+  });
+
+  /* sort: Race block first, then level desc */
+  document.getElementById('sortDesc').addEventListener('click',()=>{
+    const obj=serialize();
+    obj.items.sort((a,b)=>{
+      if(a.type!==b.type) return a.type==='Race'?-1:1;
+      const d=(b.lvl||0)-(a.lvl||0); if(d!==0) return d;
+      return (a.name||'~').localeCompare(b.name||'~','en');
+    });
+    deserialize(obj); localStorage.setItem(LS_KEY, JSON.stringify(obj));
+  });
+
+  /* initial load */
+  try{
+    const raw=localStorage.getItem(LS_KEY);
+    if(raw){ const obj=JSON.parse(raw); if(obj && obj.items && obj.items.length){ deserialize(obj); } else { createRow({type:'Race'}); createRow({type:'Class'}); applyI18n(); calcTotals(); } }
+    else{ createRow({type:'Race'}); createRow({type:'Class'}); applyI18n(); calcTotals(); }
+  }catch(e){ createRow({type:'Class'}); applyI18n(); calcTotals(); }
+
+  /* copy link */
+  document.getElementById('copyLinkBtn').addEventListener('click',()=>{
+    navigator.clipboard.writeText(location.href).then(()=>{
+      const btn=document.getElementById('copyLinkBtn'); const old=btn.textContent;
+      btn.textContent='✅ Copied!'; setTimeout(()=>btn.textContent=old,1200);
+    }).catch(()=>alert('Copy failed'));
+  });
+})();
+</script>
+</body>
+</html>
