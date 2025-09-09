@@ -29,7 +29,7 @@ Overlord 角色建構器：D&D 風角色卡與等級計算（種族/職業分流
 Overlord character builder, Overlord character sheet, Overlord multiclass planner, Overlord character maker, level calculator, race class levels, character planner, character optimizer,
 DND, DND5e, D&D, Dungeons and Dragons, 5e, TTRPG, tabletop RPG, character sheet builder, multiclass calculator, make my custom overlord character build
 Warrior, Fighter, Barbarian, Paladin, Cleric, Warpriest, Inquisitor, Druid, Ranger, Rogue, Bard, Monk, Wizard, Sorcerer, Warlock, Artificer, Alchemist,
-Sage, Linguist, Illusionist, Shadowdancer, Runecaster, Necromancer, Fateweaver, Dreamwalker, Trickster, Protector, isekai ainz ooal gown,　My own Character, Original tool quick easy to use, Nazarick, 
+Sage, Linguist, Illusionist, Shadowdancer, Runecaster, Necromancer, Fateweaver, Dreamwalker, Trickster, Protector, isekai ainz ooal gown,　My own Character, Original tool quick easy to use, Nazarick, Momonga, Albedo, Demiurge, Shalltear, Aura, Mare, Cocytus, Sebas,Narberal Gamma, Solution Epsilon, Entoma, CZ2128 Delta，Gazef Stronoff, Climb, Lakyus, Evileye, Tia, Tina, Brain Unglaus, Renner, Ramposa III,
 Dragonkin, Aasimar, God-kin, Doppelganger, Vampire, Lizardfolk, Orc, Goblin,
 
 オーバーロード キャラクター シート, オーバーロード ビルダー, キャラビルダー, ビルド最適化, マルチクラス, レベル計算,
@@ -39,7 +39,8 @@ Dragonkin, Aasimar, God-kin, Doppelganger, Vampire, Lizardfolk, Orc, Goblin,
 ジルクニフ, フールーダ, カジット, ニグン, 白金竜王,
 
 龙与地下城, DND 5e, 地下城与龙, 角色生成器, 角色卡, 角色构建器, 多职业, 等级计算, 种族等级, 职业等级, 预设, 导出, 角色生成, 角色養成，角色表，人物設定卡，不死者之王，骨王，魔法，異世界戰士，納薩力克地下大墳墓，空巢老骨，战斗女仆、安兹, 飞鼠, 雅儿贝德, 迪米乌哥斯, 夏提雅, 亚乌菈, 马雷, 科塞特斯, 赛巴斯, 潘朵拉斯, 尼古蕾朵, 鲁贝多,
-娜贝拉尔, 索琉香, 恩多玛, 西兹, 尤莉, 鲁普丝蕾其娜,
+娜贝拉尔, 索琉香, 恩多玛, 西兹, 尤莉, 鲁普丝蕾其娜, 葛傑夫, 克莱姆, 拉克尤丝, 伊比鲁艾, 缇雅, 缇娜, 布莱恩, 拉娜, 兰波萨,
+吉尔克尼弗, 夫路达, 卡吉特, 尼根, 白金龙王, 深渊龙王, 丽古莉特
 龍與地下城, 角色產生器, 角色卡, 角色建構器, 多職業, 等級計算, 種族等級, 職業等級, 預設, 匯出, 英文 日文 繁體中文
 " />
 
@@ -593,6 +594,57 @@ Dragonkin, Aasimar, God-kin, Doppelganger, Vampire, Lizardfolk, Orc, Goblin,
   function autosaveDebounced(){ /* shadowed above */ }
 })();
 </script>
+
+<div class="quick-links">
+  <button id="copyLinkBtn" class="copyBtn">📋 Copy Link</button>
+  <a href="https://rec.ooo" target="_blank" rel="noopener" class="sig">By Rec</a>
+</div>
+
+<style>
+.quick-links{
+  position:fixed;
+  bottom:10px;
+  right:76px;
+  display:flex;
+  gap:8px;
+  z-index:9999;
+}
+.copyBtn{
+  background:#444;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+  padding:4px 8px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+  opacity:0.85;
+}
+.copyBtn:hover{opacity:1; filter:brightness(1.1)}
+.sig{
+  background:#b82727;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+  padding:4px 8px;
+  border-radius:6px;
+  text-decoration:none;
+  opacity:0.85;
+}
+.sig:hover{opacity:1; filter:brightness(1.1)}
+</style>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click',()=>{
+  navigator.clipboard.writeText(window.location.href).then(()=>{
+    const btn=document.getElementById('copyLinkBtn');
+    const old=btn.textContent;
+    btn.textContent='✅ Copied!';
+    setTimeout(()=>btn.textContent=old,1200);
+  }).catch(()=>alert('Copy failed'));
+});
+</script>
+
 
 <a href="https://rec.ooo" target="_blank" rel="noopener" 
    class="sig">By Rec</a>
